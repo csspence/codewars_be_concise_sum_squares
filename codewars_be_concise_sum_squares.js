@@ -11,10 +11,9 @@ A few hints:
 Try researching about built-in Array methods; they may help shorten your code a lot
 */
 
-function sumSquares(array) {
-  var result = 0;
-  for (let i = 0; i < array.length; i++) {
-    result += array[i] ** 2;
-  }
-  return result;
+const sumSquares = (arr) => {
+  let s = arr.reduce((acc, curr) => {
+    return acc + (curr * curr)
+  }, 0)
+  return s;
 }
